@@ -1,0 +1,45 @@
+<html>
+  
+  <body bgcolor="green">
+    <form #frm="ngForm">
+ 
+      <div>
+        <label>Category</label>&nbsp;
+          <input type="text"  class="form-inline" name="vegetable.category" [(ngModel)]="vegetable.category">&nbsp;
+          <button type="submit"  (click)="viewVegetableByCategory()">View VegetableByCategory</button>
+      </div>
+      <br><br>
+      <div>
+        <label>Name</label>&nbsp;
+        <input type="text" class="form-inline" name="vegetable.name" [(ngModel)]="vegetable.name">&nbsp;
+        <button type="submit"  (click)="viewVegetableByName()">ViewVegetableByName</button>
+      </div>
+           
+    </form><br><br>
+    <div  align="center">
+      <table class="table table-bordered">
+        <tr>
+        <th>vegetableId</th>
+        <th>name</th>
+        <th>category</th>
+        <th>price</th>
+        <th>quantity</th>
+        
+        </tr>
+          <tr *ngFor="let vegetable of vegetables">
+            <td>{{vegetable.vegetableId}}</td>
+            <td>{{vegetable.name}}</td>
+            <td>{{vegetable.category}}</td>
+            <td>{{vegetable.price}}</td>
+            <td>{{vegetable.quantity}} </td>
+          </tr>
+        </table>
+    </div>
+    
+  </body>
+  
+</html>
+
+
+
+

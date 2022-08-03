@@ -1,0 +1,36 @@
+<html>
+    <body>
+      <h2 style="color:purple" align="center"><i>Add Vegetable</i></h2>
+   <div class="container" align="center">
+      <form>
+         <table>
+            <tr>
+               <td><label>Name</label></td>
+               <td><input type="text" class="form-control" name="vegetable.name" [(ngModel)]="vegetable.name" required></td>
+            </tr><br>
+            <tr>
+               <td><label>Category</label></td>
+               <td><input type="text" class="form-control" name="vegetable.category" [(ngModel)]="vegetable.category" required></td>
+            </tr><br>
+            <tr>
+               <td><label>Price</label></td>
+               <td><input type="number" class="form-control" name="vegetable.price" [(ngModel)]="vegetable.price" required></td>
+            </tr><br>
+            <tr>
+               <td><label>Quantity</label></td>
+               <td><input type="number" class="form-control" name="vegetable.quantity" [(ngModel)]="vegetable.quantity" required></td>
+            </tr><br>
+            <tr>
+               <td align="center">
+                     <button type="button" class="btn btn-primary" (click)="addVegetable()" > Add Vegetable</button>
+               </td>
+            </tr>
+         </table>
+      </form>
+   </div>
+    </body>
+   
+  
+        
+</html>
+

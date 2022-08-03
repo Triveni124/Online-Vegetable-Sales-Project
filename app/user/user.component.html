@@ -1,0 +1,33 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div><a href="www.capgemini.com" class="navbar-brand">Capgemini</a></div>&nbsp;&nbsp;
+  <ul class="navbar-nav">
+    <!--replace with routerLink instead of so that page will not be refreshed every time-->
+  <li><a  routerLink="/home" class="navbar-link">HOME</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/about" class="navbar-link">About</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/contactUs" class="navbar-link">ContactUs</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/feedback" class="navbar-link">Feedback</a></li>&nbsp; &nbsp;
+  </ul>
+  <ul class="navbar-nav navbar-collapse justify-content-end">
+    <li><a  routerLink="/login" class="navbar-link">Login</a></li>&nbsp; &nbsp;
+    <li><a routerLink="/logout" class="navbar-link">Logout</a></li>&nbsp; &nbsp;
+   </ul>
+   </nav>
+  </header>
+
+
+  
+  <div class="container">
+  <form class="form-horizontal">
+    <h1 style="color:green">Admin Details</h1>
+    Enter AdminName:<input type="text" class="form-control" name="admin.name"[(ngModel)]="admin.name"><br><br>
+    Enter AdminContactNumber:<input type="number" class="form-control" name="admin.contactNumber" [(ngModel)]="admin.contactNumber"><br><br>
+    Enter AdminMailId:<input type="text" class="form-control" name="admin.emailId" [(ngModel)]="admin.emailId"><br><br>
+    <h1 style="color:gold">User Details</h1>
+    Enter UserMail:<input type="text" class="form-control" name="admin.user.email" [(ngModel)]="admin.user.email"><br><br>
+    Enter UserPassword:<input type="password" class="form-control" name="admin.user.password" [(ngModel)]="admin.user.password"><br><br>
+    Enter UserCategory:<input type="text" class="form-control" name="admin.user.role"[(ngModel)]="admin.user.role"><br><br>
+    <button type="button" class="btn btn-primary" (click)="AddUser()">AddUser</button>
+
+  </form>
+</div>

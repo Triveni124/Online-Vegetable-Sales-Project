@@ -1,0 +1,58 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <h1 style="color:green" class="h4">
+        Update Order
+      </h1>
+      <hr>
+    </div>
+  </div>
+  <div class="row" >
+    <div class="col-5">
+      
+      <form>
+        <div class="from-group"> 
+      <label for="name">Order Id</label>
+      <input type="text" name="orderId" id="" class="form-control" placeholder="Enter Order Id" required [(ngModel)] = "orderId">&nbsp;
+      
+  </div>
+  <br>
+  <div class="from-group">
+  <button (click)="getOrderById()" class="btn btn-primary">Get Order</button>
+  </div>
+  <br>
+  </form>
+  </div>
+  <form>
+  <div *ngIf="flag">
+      <div class="from-group">
+      
+              <!--<label for="name">Customer Name</label>
+              <input type="text"   name="customer.name" id="" class="form-control" placeholder="Enter Customer Name"  required  [(ngModel)] = "customer.name">&nbsp;
+          </div>
+          <br> 
+              <div class="from-group">-->
+              
+                      <label for="name">totalAmount</label>
+                      <input type="text"   name="order.totalAmount" id="" class="form-control" placeholder="totalAmount"  required  [(ngModel)] = "order.totalAmount">&nbsp;
+                  </div>
+                  <br>
+                  <div class="from-group">
+              
+                      <label for="name"> orderDate</label>
+                      <input type="text"   name="order.orderDate" id="" class="form-control" placeholder="Enter orderDate"  requitotalred  [(ngModel)] = "order.orderDate">&nbsp;
+                  </div>
+                  <br>
+                  <div class="from-group">
+              
+                      <label for="name">status</label>
+                      <input type="text"   name="order.status" id="" class="form-control" placeholder="status"  required  [(ngModel)] = "order.status">&nbsp;
+                  </div>
+                  <br>
+                  <div class="from-group">
+                    <button (click)="updateOrder()" class="btn btn-primary "><i class="fa fa-edit">&nbsp;</i>updateOrder</button>
+                  </div>
+              
+          </div>
+      </form>
+  

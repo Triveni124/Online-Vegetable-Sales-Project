@@ -1,0 +1,61 @@
+<html>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <h1 style="color:green" class="h4">
+        Update BillingDetails
+      </h1>
+      <hr>
+    </div>
+  </div>
+  <div class="row" >
+    <div class="col-5">
+      
+    <form>
+        <div class="from-group"> 
+      <label for="name">Billing Id</label>
+      <input type="text" name="billingDetails.billId" id="" class="form-control" placeholder="Enter Billing Id" required [(ngModel)] = "billingDetails.billId">&nbsp;
+      
+  </div>
+  <br>
+  
+  <div class="from-group">
+    <button type="button" (click)="getBillingDetailsById()" class="btn btn-primary">Get BillingDetails</button>
+    </div>
+    <br>
+  </form>
+    </div>
+    <form>
+      <div *ngIf="flag">
+    
+    
+   
+   <div class="from-group">
+
+        <label for="name">transactionMode</label>
+        <input type="text"   name="billingDetails.transactionMode" id="" class="form-control" placeholder="Enter transactionMode"  required  [(ngModel)] = "billingDetails.transactionMode">&nbsp;
+    </div>
+    <br>
+   
+     <div class="from-group">
+        <label for="name">transactionDate</label>
+        <input type="date"   name="billingDetails.transactionDate" id="" class="form-control" placeholder="Enter date"  required pattern="dd/mm/yyyy" [(ngModel)] = "billingDetails.transactionDate">&nbsp;
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="name">transactionStatus</label>
+        <input type="text"   name="billingDetails.transactionStatus" id="" class="form-control" placeholder="Enter transactionStatus"  [(ngModel)] = "billingDetails.transactionStatus">&nbsp;
+    </div>
+    <br>
+
+  
+    
+    <div class="form-group"> 
+<!--<button type="button" class="btn btn-success"(click)="updateBill()">update Bill</button>-->
+
+<button type="button" (click)="updateBill()" class="btn btn-primary ">Update Bill</button>
+</div> 
+
+</div>
+</form>

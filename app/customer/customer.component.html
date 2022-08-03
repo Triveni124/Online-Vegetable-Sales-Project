@@ -1,0 +1,31 @@
+
+  
+  <div class="container">
+    <form class="form-horizontal">
+      <h1 style="color:skyblue">Customer Registration Form</h1>
+      Enter CustomerName:<input type="text" class="form-control" name="customer.name"[(ngModel)]="customer.name">
+      Enter MobileNumber:<input type="number" class="form-control" name="customer.mobileNumber" [(ngModel)]="customer.mobileNumber">
+      Enter Email:<input type="text" class="form-control" name="customer.emailId" [(ngModel)]="customer.emailId">
+      Enter Password:<input type="password" class="form-control" name="customer.password" [(ngModel)]="customer.password">
+      ConfirmPassword:<input type="password" class="form-control" name="customer.confirmPassword" [(ngModel)]="customer.confirmPassword">
+      Enter BuilduingName:<input type="text" class="form-control" name="buildingName" [(ngModel)]="customer.address.buildingName">
+      Enter Area:<input type="text" class="form-control" name="area" [(ngModel)]="customer.address.area">
+      Enter City:<input type="text" class="form-control" name="city" [(ngModel)]="customer.address.city">
+      <label for="State">Enter State</label>
+      <select name="state" [(ngModel)]="customer.address.state">
+        <option value="Select">Select</option>
+        <option value="Andhrapradesh">Andhrapradesh</option>
+        <option value="Telangana">Telangana</option>
+        <option value="MadhyaPradesh">MadhyaPradesh</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Uttar Pradesh">Uttar Pradesh</option>
+        <option value="Maharastra">Maharastra</option>
+      </select><br><br>
+      Enter PinCode:<input type="number" class="form-control" name="customer.address.pinCode" [(ngModel)]="customer.address.pinCode"><br><br>
+      Enter UserMail:<input type="text" class="form-control" name="email" [(ngModel)]="customer.user.email"><br><br>
+      Enter UserPassword:<input type="password" class="form-control" name="password" [(ngModel)]="customer.user.password"><br><br>
+      Enter UserCategory:<input type="text" class="form-control" name="role"[(ngModel)]="customer.user.role"><br><br>
+    <button type="button" class="btn btn-success" (click)="AddCustomer()">AddCustomer</button>
+    </form>
+  </div>
+  

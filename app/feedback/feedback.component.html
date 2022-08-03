@@ -1,0 +1,52 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div><a href="www.capgemini.com" class="navbar-brand">Capgemini</a></div>&nbsp;&nbsp;
+  <ul class="navbar-nav">
+    <!--replace with routerLink instead of so that page will not be refreshed every time-->
+  <li><a  routerLink="/home" class="navbar-link">HOME</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/about" class="navbar-link">About</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/contactUs" class="navbar-link">ContactUs</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/feedback" class="navbar-link">Feedback</a></li>&nbsp; &nbsp;
+  </ul>
+  <ul class="navbar-nav navbar-collapse justify-content-end">
+    <li><a  routerLink="/login" class="navbar-link">Login</a></li>&nbsp; &nbsp;
+    <li><a routerLink="/logout" class="navbar-link">Logout</a></li>&nbsp; &nbsp;
+   </ul>
+   </nav>
+  </header>
+      
+      
+      
+      
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-12">
+            <h1 style="color:green" class="h4">
+              Feedback Form
+            </h1>
+            <hr>
+          </div>
+        </div>
+        </div>
+        <div class="row" >
+          <div class="col-5">
+            
+            <form>
+              <div class="from-group"> 
+            <label for="name">Comments</label>
+            <input type="text" name="feed.comments" id="" class="form-control" placeholder="Enter Comments" required [(ngModel)] = "feed.comments">&nbsp;   
+        </div>
+        <br>
+        <div class="from-group"> 
+          <label for="name">Rating</label>
+          <input type="number" name="feed.rating" id="" class="form-control" placeholder="Rating" required [(ngModel)] = "feed.rating">  
+      </div>
+      <br><br>
+      <div class="from-group">
+        <button type="button" (click)="feedback()" class="btn btn-primary ">Feedback</button>
+   </div>
+        </form>
+        </div>
+    
+  
+

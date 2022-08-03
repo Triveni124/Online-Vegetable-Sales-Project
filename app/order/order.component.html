@@ -1,0 +1,13 @@
+<div class="container">
+  <form class="form-horizontal">
+    <h1 style="color:rgb(29, 125, 162)">Order  Form</h1>
+    
+      
+
+    <body align="center">
+    <!---- customerId:<input type="text"  name="order.customer.customerId" [(ngModel)]="order.customer.customerId"><br><br>-->
+    totalAmount:<input type="number"  name="order.totalAmount" [(ngModel)]="order.totalAmount"><br><br>
+    orderDate:<input type="date" name="order.orderDate" [(ngModel)]="order.orderDate"><br><br>
+    status:<input type="text" name="order.status" [(ngModel)]="order.status"><br><br>
+    <button type="button"  (click)="addOrder()">addOrder</button><br><br>
+

@@ -1,0 +1,44 @@
+<html>
+  <h1 style="color:blue">Customer Details</h1>
+  <body style="background-color:aqua">
+  <table align="center" border="2">
+    <thead>
+      <tr>
+        <th>CustomerId</th>
+        <th>CustomerName</th>
+        <th>Customer Email</th>
+        <th>MobileNumber</th>
+        <th>Password</th>
+        <th>ConfirmPassword</th>
+        <th>AddressId</th>
+        <th>BuildingName</th>
+        <th>Area</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Pincode</th>
+        <th>Delete</th>
+        <!--<th>Edit</th>-->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>{{customer.customerId}}</td>
+        <td>{{customer.name}}</td>
+        <td>{{customer.emailId}}</td>
+        <td>{{customer.mobileNumber}}</td>
+        <td>{{customer.password}}</td>
+        <td>{{customer.confirmPassword}}</td>
+        <td>{{customer.address.addressId}}</td>
+        <td>{{customer.address.buildingName}}</td>
+        <td>{{customer.address.area}}</td>
+        <td>{{customer.address.city}}</td>
+         <td>{{customer.address.state}}</td>
+         <td>{{customer.address.pinCode}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="deleteCustomer(customer.customerId)">DELETE</button></td>
+       <!--<td><button type="button" class="btn btn-primary" (click)="updateCustomer(customer.customerId)">EDIT</button></td>-->
+
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

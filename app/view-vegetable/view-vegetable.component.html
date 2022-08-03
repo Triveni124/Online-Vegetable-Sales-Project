@@ -1,0 +1,22 @@
+<table  align="center" class="table table-bordered">
+  <tr>
+  <th>vegetableId</th>
+  <th>name</th>
+  <th>category</th>
+  <th>price</th>
+  <th>quantity</th>
+  <th>DELETE</th>
+ 
+  </tr>
+    <tr *ngFor="let vegetable of vegetables">
+      <td>{{vegetable.vegetableId}}</td>
+      <td>{{vegetable.name}}</td>
+      <td>{{vegetable.category}}</td>
+      <td>{{vegetable.price}}</td>
+      <td>{{vegetable.quantity}} </td>
+        <td><button type="button" class="btn btn-danger" (click)="deletevegetable(vegetable.vegetableId)">DELETE</button></td>
+        
+    </tr>
+  </table>
+
+  

@@ -1,0 +1,97 @@
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div><a href="www.capgemini.com" class="navbar-brand">Capgemini</a></div>&nbsp;&nbsp;
+  <ul class="navbar-nav">
+    <!--replace with routerLink instead of so that page will not be refreshed every time-->
+  <li><a  routerLink="/home" class="navbar-link">HOME</a></li>&nbsp; &nbsp;
+  <li><a routerLink="/about" class="navbar-link">About</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/contactUs" class="navbar-link">ContactUs</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/feedback" class="navbar-link">Feedback</a></li>&nbsp; &nbsp;
+  </ul>
+  <ul class="navbar-nav navbar-collapse justify-content-end">
+    <li><a  routerLink="/login" class="navbar-link">Login</a></li>&nbsp; &nbsp;
+    <li><a  routerLink="/logout" class="navbar-link">Logout</a></li>&nbsp; &nbsp;
+   </ul>
+   </nav>
+  </header>
+  
+
+
+
+<h1 style="color:blue">
+  welcome{{name}}
+</h1>
+
+<tbody>
+  <tr>
+    <td>
+      <a *ngIf="adminFlag" routerLink="/ViewAdmin">ViewAdmin</a>&nbsp;&nbsp;
+    </td>
+    <td>
+      <a *ngIf="adminFlag" routerLink="/ViewCustomers">ViewCustomers</a>&nbsp;&nbsp;
+    </td>
+    <td>
+    <a *ngIf="adminFlag" routerLink="/CreateVegetable">CreateVegetable</a>&nbsp;&nbsp;
+  </td>
+  <td>
+    <a *ngIf="adminFlag" routerLink="/ViewVegetable">ViewVegetable</a>&nbsp;&nbsp;
+  </td>
+    <td>
+    <a *ngIf="adminFlag" routerLink="/viewVegetableByCategory">ViewVegetableByCategory</a>&nbsp;&nbsp;
+  </td>
+  <td>
+    <a *ngIf="adminFlag" routerLink="/UpdateVegetable">UpdateVegetable</a>&nbsp;&nbsp;
+  </td>
+  <td>
+    <a *ngIf="adminFlag" routerLink="/Cart">Cart</a>&nbsp;&nbsp;
+  </td>
+  <td>
+    <a *ngIf="adminFlag" routerLink="/Order">Order</a>&nbsp;&nbsp;
+  </td>
+  <td>
+    <a *ngIf="adminFlag" routerLink="/increaseVegQuantity">increaseVegQuantity</a>&nbsp;&nbsp;
+  </td>
+  <td>
+    <a *ngIf="adminFlag" routerLink="/DecreaseVegQuantity">DecreaseVegQuantity</a>&nbsp;&nbsp;
+  </td>
+  <td>
+    <a *ngIf="adminFlag" routerLink="/Bill">Bill</a>&nbsp;&nbsp;
+  </td>
+
+  <td>
+    <a *ngIf="adminFlag" routerLink="/updateBill">updateBill</a>&nbsp;&nbsp;
+  </td>
+
+  
+    <td>
+      <a *ngIf="customerFlag" routerLink="/CreateCustomer">CreateCustomer</a>&nbsp;&nbsp;
+    </td>
+    <td>
+      <a *ngIf="customerFlag" routerLink="/ViewCustomer">ViewCustomer</a>&nbsp;&nbsp;
+    </td>
+    <td>
+      <a *ngIf="customerFlag" routerLink="/UpdateCustomer">UpdateCustomer</a>&nbsp;&nbsp;
+    </td>
+    <td>
+      <a *ngIf="customerFlag" routerLink="/feedback">Feedback</a>&nbsp;&nbsp;
+    </td>
+    <td>
+      <a *ngIf="customerFlag" routerLink="/ViewVegetable">ViewVegetable</a>&nbsp;&nbsp;
+    </td>
+      <td>
+      <a *ngIf="customerFlag" routerLink="/viewVegetableByCategory">ViewVegetableByCategory</a>&nbsp;&nbsp;
+    </td>
+    
+    <a routerLink="/logout">Logout</a>
+  </tr>
+
+</tbody>
+
+<div class="slider">
+  <figure >
+    <img src="./assets/images/veg.jpg">
+
+    
+  </figure>
+</div>

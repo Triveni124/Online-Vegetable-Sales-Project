@@ -1,0 +1,57 @@
+<h1 style="color:mediumvioletred" class="h4" align="center">
+  Update Vegetable
+</h1>
+
+<form>
+<div  align="center"> 
+<label for="name">Vegetable Id</label>&nbsp;
+<input type="text" class="form-inline" name="vegetableId"  placeholder="Enter Vegetable Id" required [(ngModel)] = "vegetableId">&nbsp;
+
+</div>
+<br>
+<div align="center">
+<button type="button"   (click)="getVegetableById()" class="btn btn-primary">Get Vegetable</button>
+</div>
+<br>
+</form>
+
+
+<form>
+<div *ngIf="flag" align="center">
+<div>
+
+     <label for="name">Name</label>
+     <input type="text"   name="name"  class="form-inline" placeholder="Enter Vegetable Name"  required  [(ngModel)] = "name">&nbsp;
+ </div>
+ <br> 
+     
+         <div>
+     
+             <label for="name">Category</label>
+             <input type="text"   name="category"  class="form-inline" placeholder="Enter Category"  required  [(ngModel)] = "category">&nbsp;
+         </div>
+         <br>
+         <div>
+     
+             <label for="name">Price</label>
+             <input type="number"   name="price"  class="form-inline" placeholder="Enter price"  [(ngModel)] = "price">&nbsp;
+         </div>
+         <br>
+         <div>
+     
+             <label for="name">Quantity</label>
+             <input type="number"   name="quantity" class="form-inline"  [(ngModel)] = "quantity">&nbsp;
+         </div>
+
+         <br>
+         <div>
+             <button (click)="updateVegetable()" class="btn btn-primary ">Update Vegetable</button>
+        </div>
+
+
+ </div>
+</form>  
+
+
+
+

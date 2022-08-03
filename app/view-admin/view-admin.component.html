@@ -1,0 +1,37 @@
+
+
+<html>
+  <body>
+  <table align="center" border="2" class="table table-dark">
+    <thead>
+      <tr>
+        <th>AdminId</th>
+        <th>AdminName</th>
+        <th>Admin Mail</th>
+        <th>MobileNumber</th>
+        <th>UserId</th>
+        <th>UserEmail</th>
+        <th>UserPassword</th>
+        <th>Role</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let admin of admins">
+        <td>{{admin.adminId}}</td>
+        <td>{{admin.name}}</td>
+        <td>{{admin.emailId}}</td>
+        <td>{{admin.contactNumber}}</td>
+        <td>{{admin.user.userId}}</td>
+        <td>{{admin.user.email}}</td>
+        <td>{{admin.user.password}}</td>
+        <td>{{admin.user.role}}</td>
+        <td><button class="btn btn-danger" (click)="deleteAdmin(admin.adminId)">DELETE</button></td>
+        <td><button class="btn btn-primary" (click)="updateAdmin(admin.adminId)">EDIT</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

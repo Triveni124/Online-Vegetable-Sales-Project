@@ -1,0 +1,93 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div><a href="www.capgemini.com" class="navbar-brand">Capgemini</a></div>&nbsp;&nbsp;
+  <ul class="navbar-nav">
+    <!--replace with routerLink instead of so that page will not be refreshed every time-->
+  <li><a  routerLink="/home" class="navbar-link">HOME</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/about" class="navbar-link">About</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/contactUs" class="navbar-link">ContactUs</a></li>&nbsp; &nbsp;
+  <li><a  routerLink="/feedback" class="navbar-link">Feedback</a></li>&nbsp; &nbsp;
+  </ul>
+  <ul class="navbar-nav navbar-collapse justify-content-end">
+    <li><a  routerLink="/login" class="navbar-link">Login</a></li>&nbsp; &nbsp;
+    <li><a routerLink="/logout" class="navbar-link">Logout</a></li>&nbsp; &nbsp;
+   </ul>
+   </nav>
+  </header>
+
+
+
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <h1 style="color:green" class="h4">
+          Update Customer
+        </h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-5">
+        
+        <form>
+          <div class="from-group"> 
+        <label for="name">Customer Id</label>
+        <input type="text" name="customerId" id="" class="form-control" placeholder="Enter Customer Id" required [(ngModel)] = "customerId">&nbsp;
+        
+    </div>
+    <br>
+    <div class="from-group">
+    <button (click)="getCustById()" class="btn btn-primary">Get Customer</button>
+    </div>
+    <br>
+    </form>
+    </div>
+    <form>
+    <div *ngIf="flag">
+        <div class="from-group">
+        
+                <label for="name">Customer Name</label>
+                <input type="text"   name="customer.name" id="" class="form-control" placeholder="Enter Customer Name"  required  [(ngModel)] = "customer.name">&nbsp;
+            </div>
+            <br> 
+                <div class="from-group">
+                
+                        <label for="name">Customer Email</label>
+                        <input type="text"   name="customer.emailId" id="" class="form-control" placeholder="Ex:abc@gmail.com"  required  [(ngModel)] = "customer.emailId">&nbsp;
+                    </div>
+                    <br>
+                    <div class="from-group">
+                
+                        <label for="name"> Password</label>
+                        <input type="password"   name="customer.password" id="" class="form-control" placeholder="Enter Password"  required  [(ngModel)] = "customer.password">&nbsp;
+                    </div>
+                    <br>
+                    <div class="from-group">
+                
+                        <label for="name">Confirm Password</label>
+                        <input type="password"   name="customer.confirmPassword" id="" class="form-control" placeholder="Password"  required  [(ngModel)] = "customer.confirmPassword">&nbsp;
+                    </div>
+                    <br>
+                    <div class="from-group">
+                
+                        <label for="name">Mobile Number</label>
+                        <input type="number"   name="customer.mobileNumber" id="" class="form-control" placeholder="9875632548"  required pattern="[789]{1}[0-9]{9}" [(ngModel)] = "customer.mobileNumber">&nbsp;
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="name">User Id</label>
+                        <input type="text"   name="customer.user.userId" id="" class="form-control" placeholder="Enter User Id" required  [(ngModel)] = "customer.user.userId" readonly>&nbsp;
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="name">Address Id</label>
+                        <input type="text"   name="customer.address.addressId" id="" class="form-control" placeholder="Enter Address Id" required  [(ngModel)] = "customer.address.addressId" readonly>&nbsp;
+                    </div>
+                    <br>
+                    <div class="from-group">
+                        <button (click)="updateCustomer()" class="btn btn-primary "><i class="fa fa-edit">&nbsp;</i>Update Customer</button>
+                   </div>
+
+
+            </div>
+        </form>
